@@ -1,4 +1,4 @@
-Devices ( Device_ID, Device_Name, Device_Type,Manufacturer, Model, Status, Location)
+Devices ( Device_ID, Device_Name, Device_Type, Manufacturer, Model, Status, Location)
 
 Networks ( Network_ID, Network_Name, Subnet, Gateway, Vlan)
 
@@ -8,7 +8,7 @@ Operating_Systems ( OS_ID, OS_Name, Version, Architecture)
 
 Virtual_Machines ( VM_ID, VM_Name, Device_ID, OS_ID, CPU_Cores, RAM_Used, Storage_Used, Status)
 
-Docker_Containers ( Container_ID, Container_Name, VM_ID, ImageName, Port_Number, Status)
+Docker_Containers ( Container_ID, Container_Name, VM_ID, Image_Name, Port_Number, Status)
 
 Services ( Service_ID, Service_Name, Service_Type, Device_ID, VM_ID, Container_ID, Port, Status)
 

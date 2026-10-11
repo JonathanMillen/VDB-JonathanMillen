@@ -1,0 +1,44 @@
+1. What is the most expensive rent? $780.00 
+
+	SELECT MAX(Rent) AS [most expensive rent] 
+	FROM   Apartment
+
+2. What is the total square feet of all the apartments in Building_ID 2? 2200 
+
+	SELECT SUM(Sq_Ft) AS [total square feet], Building_ID
+	FROM   Apartment
+	GROUP BY Building_ID
+	HAVING (Building_ID = 2)
+
+3. What is the Name of the tenant that pays the most rent? Sally G Doe $750.00
+
+	SELECT  Person.First_Name, Person.Middle_Initial, Person.Last_Name, MAX(Apartment.Rent) AS [most expensive rent]
+	FROM   Apartment INNER JOIN
+				 Person ON Apartment.Tenant_ID = Person.Person_ID
+	GROUP BY Person.First_Name, Person.Middle_Initial, Person.Last_Name
+	ORDER BY [most expensive rent] DESC
+
+4. What is the average number of bedrooms per apartment owned by this property management company?
+
+
+
+5. How many buildings do they manage? 4
+
+	SELECT COUNT(Building_ID) AS [number of buildings]
+	FROM   Building
+
+6. How many apartments does Mark Degallier manage? 4
+
+	SELECT  COUNT(Apartment.Apartment_ID) AS [Apartments managed by], Person.First_Name, Person.Last_Name
+	FROM   Apartment INNER JOIN
+				 Person ON Apartment.Manager_ID = Person.Person_ID
+	GROUP BY  Person.First_Name, Person.Last_Name
+	HAVING (Person.First_Name = N'Mark') AND (Person.Last_Name = N'Degallier')
+
+
+7. Which Invoice_ID received the smallest Payment (receipt)? 1	111.00
+
+SELECT Invoice_ID, MIN(ReceiptAmount) AS [smallest payment]
+FROM   Receipt
+GROUP BY Invoice_ID
+ORDER BY [smallest payment]

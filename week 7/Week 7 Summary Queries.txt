@@ -18,9 +18,10 @@
 	GROUP BY Person.First_Name, Person.Middle_Initial, Person.Last_Name
 	ORDER BY [most expensive rent] DESC
 
-4. What is the average number of bedrooms per apartment owned by this property management company?
+4. What is the average number of bedrooms per apartment owned by this property management company? 2
 
-
+	SELECT AVG(Beds) AS [average bedrooms]
+	FROM   Apartment
 
 5. How many buildings do they manage? 4
 
@@ -38,8 +39,8 @@
 
 7. Which Invoice_ID received the smallest Payment (receipt)? 1	111.00
 
-SELECT Invoice.InvoiceID, MIN(Receipt.ReceiptAmount) AS [smallest payment]
-FROM   Invoice INNER JOIN
-             Receipt ON Invoice.InvoiceID = Receipt.Invoice_ID
-GROUP BY Invoice.InvoiceID
-ORDER BY [smallest payment]
+	SELECT Invoice.InvoiceID, MIN(Receipt.ReceiptAmount) AS [smallest payment]
+	FROM   Invoice INNER JOIN
+				 Receipt ON Invoice.InvoiceID = Receipt.Invoice_ID
+	GROUP BY Invoice.InvoiceID
+	ORDER BY [smallest payment]

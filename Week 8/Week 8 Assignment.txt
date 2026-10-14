@@ -1,0 +1,71 @@
+
+Problem 1)  SELECT Building.Building_ID, Building.Building_Name, Apartment.Apt_Number, Person.First_Name, Person.Last_Name
+            FROM   Building INNER JOIN
+                         Apartment ON Building.Building_ID = Apartment.Building_ID INNER JOIN
+                         Person ON Apartment.Manager_ID = Person.Person_ID
+            ORDER BY Building.Building_Name, Apartment.Apt_Number, Person.Last_Name, Person.First_Name
+
+
+Problem 2)  SELECT Person.Person_ID, Person.Last_Name, Person.First_Name, Building.Building_Name, Apartment.Apt_Number
+            FROM   Person INNER JOIN
+                         Apartment ON Person.Person_ID = Apartment.Tenant_ID INNER JOIN
+                         Building ON Apartment.Building_ID = Building.Building_ID
+            ORDER BY Person.Last_Name, Person.First_Name, Building.Building_Name, Apartment.Apt_Number
+
+
+Problem 3)  SELECT Apartment.Apt_Number, Person.Last_Name, Person.First_Name, Invoice.InvoiceID, Building.Building_ID, Product.Description, Product.Price, LineItem.Qty
+            FROM   Invoice INNER JOIN
+                         Apartment ON Invoice.Apartment_ID = Apartment.Apartment_ID INNER JOIN
+                         Person ON Apartment.Tenant_ID = Person.Person_ID INNER JOIN
+                         Building ON Apartment.Building_ID = Building.Building_ID INNER JOIN
+                         LineItem ON Invoice.InvoiceID = LineItem.Invoice_ID INNER JOIN
+                         Product ON LineItem.Product_ID = Product.Product_ID
+            WHERE (Building.Building_ID = 1)
+            ORDER BY Apartment.Apt_Number, Person.Last_Name, Person.First_Name, Invoice.InvoiceID
+
+
+Problem 4)  SELECT SUM(Receipt.ReceiptAmount) AS Total, Building.Building_Name, Apartment_1.Apt_Number, Person.Last_Name, Person.First_Name
+            FROM   Apartment AS Apartment_1 INNER JOIN
+                         Building ON Apartment_1.Building_ID = Building.Building_ID INNER JOIN
+                         Person ON Apartment_1.Tenant_ID = Person.Person_ID INNER JOIN
+                         Invoice ON Apartment_1.Apartment_ID = Invoice.Apartment_ID INNER JOIN
+                         Receipt ON Invoice.InvoiceID = Receipt.Invoice_ID
+            GROUP BY Building.Building_Name, Apartment_1.Apt_Number, Person.Last_Name, Person.First_Name
+
+
+Problem 5)  SELECT Invoice.InvoiceID, Building.Building_ID, Apartment.Apt_Number, Person.Last_Name, Person.First_Name, Receipt.ReceiptAmount
+            FROM   Receipt INNER JOIN
+                         Invoice ON Receipt.Invoice_ID = Invoice.InvoiceID INNER JOIN
+                         Apartment ON Invoice.Apartment_ID = Apartment.Apartment_ID INNER JOIN
+                         Person ON Apartment.Tenant_ID = Person.Person_ID INNER JOIN
+                         Building ON Apartment.Building_ID = Building.Building_ID
+            ORDER BY Person.Last_Name, Person.First_Name
+
+
+Problem 6)  SELECT Invoice.InvoiceID, Apartment.Building_ID, Apartment.Apt_Number, Person.Last_Name, Person.First_Name, SUM(Receipt.ReceiptAmount) AS [Receipt Total]
+            FROM   Person INNER JOIN
+                         Apartment ON Person.Person_ID = Apartment.Manager_ID INNER JOIN
+                         Invoice ON Apartment.Apartment_ID = Invoice.Apartment_ID INNER JOIN
+                         Receipt ON Invoice.InvoiceID = Receipt.Invoice_ID
+            GROUP BY Invoice.InvoiceID, Apartment.Building_ID, Apartment.Apt_Number, Person.Last_Name, Person.First_Name
+            ORDER BY Person.Last_Name, Person.First_Name
+
+
+Problem 7)  SELECT Product.Name, Product.Description, Product.Price, SUM(LineItem.Qty) AS [Total Electric Used], LineItem.Product_ID
+            FROM   LineItem INNER JOIN
+                         Product ON LineItem.Product_ID = Product.Product_ID INNER JOIN
+                         Invoice ON LineItem.Invoice_ID = Invoice.InvoiceID INNER JOIN
+                         Apartment INNER JOIN
+                         Person ON Apartment.Tenant_ID = Person.Person_ID ON Invoice.Apartment_ID = Apartment.Apartment_ID
+            GROUP BY Product.Name, Product.Description, Product.Price, LineItem.Product_ID
+            HAVING (Product.Name = N'Electricity')
+
+OR
+            SELECT Product.Name, Product.Description, Product.Price, SUM(LineItem.Qty) AS [Total Electric Used], LineItem.Product_ID
+            FROM   LineItem INNER JOIN
+                         Product ON LineItem.Product_ID = Product.Product_ID INNER JOIN
+                         Invoice ON LineItem.Invoice_ID = Invoice.InvoiceID INNER JOIN
+                         Apartment INNER JOIN
+                         Person ON Apartment.Tenant_ID = Person.Person_ID ON Invoice.Apartment_ID = Apartment.Apartment_ID
+            GROUP BY Product.Name, Product.Description, Product.Price, LineItem.Product_ID
+            HAVING (LineItem.Product_ID = 1)

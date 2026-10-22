@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\jonmm\\source\\repos\\VDB-JonathanMillen\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54383F03-F541-D7E0-CD0A-C58A0D43AB3F}|week 7\\week 7.ssmssqlproj|C:\\Users\\jonmm\\source\\repos\\VDB-JonathanMillen\\week 7\\Week 7 Summary Queries.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{54383F03-F541-D7E0-CD0A-C58A0D43AB3F}|week 7\\week 7.ssmssqlproj|solutionrelative:week 7\\Week 7 Summary Queries.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{36AE74FA-D9E2-6FC3-35B1-312A8EBB5F78}|Week 8\\Week 8.ssmssqlproj|C:\\Users\\jonmm\\source\\repos\\VDB-JonathanMillen\\Week 8\\Week 8 Assignment.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{36AE74FA-D9E2-6FC3-35B1-312A8EBB5F78}|Week 8\\Week 8.ssmssqlproj|solutionrelative:Week 8\\Week 8 Assignment.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,13 +23,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Week 7 Summary Queries.txt",
-              "DocumentMoniker": "C:\\Users\\jonmm\\source\\repos\\VDB-JonathanMillen\\week 7\\Week 7 Summary Queries.txt",
-              "RelativeDocumentMoniker": "week 7\\Week 7 Summary Queries.txt",
-              "ToolTip": "Week 7 Summary Queries.txt",
+              "Title": "Week 8 Assignment.txt",
+              "DocumentMoniker": "C:\\Users\\jonmm\\source\\repos\\VDB-JonathanMillen\\Week 8\\Week 8 Assignment.txt",
+              "RelativeDocumentMoniker": "Week 8\\Week 8 Assignment.txt",
+              "ToolTip": "Week 8 Assignment.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-10-11T02:29:01.688Z",
+              "WhenOpened": "2026-10-19T04:10:31.956Z",
               "EditorCaption": ""
             }
           ]

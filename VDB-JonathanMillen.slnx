@@ -3,23 +3,23 @@
     <BuildType Name="Default" />
     <Platform Name="Default" />
   </Configurations>
-  <Project Path="MyProject/MyProject.ssmssqlproj" Type="4f2e2c19-372f-40d8-9fa7-9d2138c6997a">
+  <Project Path="../../../../../../source/repos/VDB-JonathanMillen/MyProject/MyProject.ssmssqlproj" Type="4f2e2c19-372f-40d8-9fa7-9d2138c6997a">
     <Platform Project="?" />
     <Build Project="false" />
   </Project>
-  <Project Path="week 7/week 7.ssmssqlproj" Type="4f2e2c19-372f-40d8-9fa7-9d2138c6997a">
+  <Project Path="../../../../../../source/repos/VDB-JonathanMillen/week 7/week 7.ssmssqlproj" Type="4f2e2c19-372f-40d8-9fa7-9d2138c6997a">
     <Platform Project="?" />
     <Build Project="false" />
   </Project>
-  <Project Path="Week 8/Week 8.ssmssqlproj" Type="4f2e2c19-372f-40d8-9fa7-9d2138c6997a">
+  <Project Path="../../../../../../source/repos/VDB-JonathanMillen/Week 8/Week 8.ssmssqlproj" Type="4f2e2c19-372f-40d8-9fa7-9d2138c6997a">
     <Platform Project="?" />
     <Build Project="false" />
   </Project>
-  <Project Path="Week 9/Week 9.ssmssqlproj" Type="4f2e2c19-372f-40d8-9fa7-9d2138c6997a">
+  <Project Path="../../../../../../source/repos/VDB-JonathanMillen/Week 9/Week 9.ssmssqlproj" Type="4f2e2c19-372f-40d8-9fa7-9d2138c6997a">
     <Platform Project="?" />
     <Build Project="false" />
   </Project>
-  <Project Path="Week6Joins/Week6Joins.ssmssqlproj" Type="4f2e2c19-372f-40d8-9fa7-9d2138c6997a">
+  <Project Path="../../../../../../source/repos/VDB-JonathanMillen/Week6Joins/Week6Joins.ssmssqlproj" Type="4f2e2c19-372f-40d8-9fa7-9d2138c6997a">
     <Platform Project="?" />
     <Build Project="false" />
   </Project>

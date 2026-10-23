@@ -1,12 +1,39 @@
-SELECT Building.Building_Name, Apartment.Apt_Number, TRIM(Person.Last_Name) + ' ' + TRIM(Person.First_Name) AS [Full Name]
-FROM   Building INNER JOIN
-             Apartment ON Building.Building_ID = Apartment.Building_ID INNER JOIN
-             Person ON Apartment.Manager_ID = Person.Person_ID
-ORDER BY TRIM(Person.Last_Name) + ' ' + TRIM(Person.First_Name)
+1) SELECT Building.Building_Name, Apartment.Apt_Number, TRIM(Person.Last_Name) + ' ' + TRIM(Person.First_Name) AS [Full Name]
+   FROM   Building INNER JOIN
+                Apartment ON Building.Building_ID = Apartment.Building_ID INNER JOIN
+                Person ON Apartment.Manager_ID = Person.Person_ID
+   ORDER BY TRIM(Person.Last_Name) + ' ' + TRIM(Person.First_Name)
 
 
-SELECT Person.First_Name + Person.Last_Name AS [Tenant Name], Address.Street_1 + Apartment.Apt_Number AS Apt, Address.City + Address.State + CAST(Address.Zip AS Varchar(5)) AS Location
-FROM   Person INNER JOIN
-             Apartment ON Person.Person_ID = Apartment.Tenant_ID INNER JOIN
-             Address ON Person.Address_ID = Address.Address_ID
-ORDER BY Person.Last_Name, Person.First_Name
+2)  SELECT Person.First_Name + Person.Last_Name AS [Tenant Name], Address.Street_1 + Apartment.Apt_Number AS Apt, Address.City + Address.State + CAST(Address.Zip AS Varchar(5)) AS Location
+    FROM   Person INNER JOIN
+                 Apartment ON Person.Person_ID = Apartment.Tenant_ID INNER JOIN
+                 Address ON Person.Address_ID = Address.Address_ID
+    ORDER BY Person.Last_Name, Person.First_Name
+
+
+3)  SELECT Building.Building_Name, Apartment.Apt_Number, Apartment.Rent, Apartment.Sq_Ft * .9 + 100 * Apartment.Baths AS estRent
+    FROM   Building INNER JOIN
+                 Apartment ON Building.Building_ID = Apartment.Building_ID
+    ORDER BY Building.Building_Name, Apartment.Apt_Number
+
+
+4) 
+
+
+5) 
+
+
+6)  SELECT DATEADD(week, 4, Invoice.InvoiceDate) AS [Next Invoice Date], Person.First_Name, Person.Last_Name
+    FROM   Invoice INNER JOIN
+                Apartment ON Invoice.Apartment_ID = Apartment.Apartment_ID INNER JOIN
+                Person ON Apartment.Tenant_ID = Person.Person_ID
+    ORDER BY Person.Last_Name, Person.First_Name
+
+
+
+7)  SELECT Person.First_Name + Person.Last_Name AS Name, DATEDIFF(day, Invoice.InvoiceDate, Invoice.DueDate) AS [Days to pay]
+    FROM   Invoice INNER JOIN
+                Apartment ON Invoice.Apartment_ID = Apartment.Apartment_ID INNER JOIN
+                Person ON Apartment.Tenant_ID = Person.Person_ID
+    ORDER BY Person.Last_Name, Person.First_Name

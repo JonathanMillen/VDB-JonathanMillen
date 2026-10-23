@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\jonmm\\source\\repos\\VDB-JonathanMillen\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{F4FC2431-45BB-5319-EA0F-F9335A624C15}|Week 9\\Week 9.ssmssqlproj|C:\\Users\\jonmm\\source\\repos\\VDB-JonathanMillen\\Week 9\\Week 9.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{F4FC2431-45BB-5319-EA0F-F9335A624C15}|Week 9\\Week 9.ssmssqlproj|solutionrelative:Week 9\\Week 9.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -14,23 +9,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Week 9.txt",
-              "DocumentMoniker": "C:\\Users\\jonmm\\source\\repos\\VDB-JonathanMillen\\Week 9\\Week 9.txt",
-              "RelativeDocumentMoniker": "Week 9\\Week 9.txt",
-              "ToolTip": "Week 9.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-10-22T15:36:53.881Z",
-              "EditorCaption": ""
             }
           ]
         }
